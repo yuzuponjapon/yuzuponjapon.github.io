@@ -3,8 +3,17 @@ body {
 	background-color: #fffeee;
 }
 h1 {
+	font-family: serif;
 	color: #0bd;
 }
+
+h2 {
+	font-family: fantasy;
+	color: red;
+}
+
 p {
-	color:red; font-size: 200px;
+	color:red;
+	font-family: cursive;
+	font-size: 20px;
 }
