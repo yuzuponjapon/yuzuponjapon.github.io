@@ -4,15 +4,15 @@ body {
 }
 h1 {
 	font-family: 'Hachi Maru Pop', cursive;
-	color: #0bd;
+	color: #65e6ca;
 }
 
 h2 {
 	font-family: 'Hachi Maru Pop', cursive;
-	color: red;
+	color: navy;
 }
 
 p {
-	color:red;
+	color: rgba(122,101,230,.2);
 	font-family: "Nikukyu";
 }
