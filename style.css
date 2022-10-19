@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
 	background-color: #30d5c8;
+	background-image: url(images/umi.png);
 }
 h1 {
 	background-color: #03a5fc;
