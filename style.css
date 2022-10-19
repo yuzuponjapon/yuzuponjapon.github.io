@@ -2,7 +2,8 @@
 body {
 	background-color: #30d5c8;
 	background-image: url(images/umi.png);
-	background-repeat: repeat-x;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 h1 {
 	background-color: #03a5fc;
