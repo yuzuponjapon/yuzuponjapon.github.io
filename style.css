@@ -6,7 +6,13 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 */
-	background #30d5c8 url(images/umi.png) no-repeat left top / cover;
+/*	background #30d5c8 url(images/umi.png) no-repeat left top / cover;
+ */
+	div {
+		bakground: #0db;
+		width: 500px;
+		height: 300;
+	}
 }
 h1 {
 	background-color: #03a5fc;
