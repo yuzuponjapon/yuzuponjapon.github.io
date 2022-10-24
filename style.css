@@ -14,13 +14,14 @@ body {
 
 h1 {
 	background-color: #03a5fc;
-	whidth: 100px;
 	font-family: 'Hachi Maru Pop', cursive;
 	color: #65e6ca;
 }
 
 h2 {
 	font-family: 'Hachi Maru Pop', cursive;
+	backgtound-color: #05c822;
+	whidth : 50%;
 	color: navy;
 }
 
