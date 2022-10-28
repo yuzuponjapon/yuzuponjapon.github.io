@@ -6,15 +6,13 @@ body {
 	background-size: cover;
 }
 
-div {
-	background-color: rgba(252,236,3,1);
-	width: 200px;
-}
 h1 {
 	background-color: #03a5fc;
 	font-family: 'Hachi Maru Pop', cursive;
 	color: #65e6ca;
-	width: 50%;
+	width: 30%;
+	margin-top: 30px;
+	margin-left: 200px;
 }
 
 h2 {
@@ -28,4 +26,6 @@ h2 {
 p {
 	color: rgba(252,186,3,1);
 	font-family: "Nikukyu";
+	background-color: rgba(252,236,3,1);
+	width: 200px;
 }
