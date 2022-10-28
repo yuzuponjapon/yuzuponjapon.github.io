@@ -8,19 +8,19 @@ body {
 
 div {
 	background-color: rgba(252,236,3,1);
-	whidth: 50%;
+	width: 200px;
 }
 h1 {
 	background-color: #03a5fc;
 	font-family: 'Hachi Maru Pop', cursive;
 	color: #65e6ca;
-	whidth: 50%;
+	width: 50%;
 }
 
 h2 {
 	font-family: 'Hachi Maru Pop', cursive;
 	background-color: #05c822;
-	whidth : 50%;
+	width : 50%;
 	color: navy;
 }
 
