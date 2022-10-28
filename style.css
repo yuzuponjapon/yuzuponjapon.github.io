@@ -1,21 +1,16 @@
 @charset "UTF-8";
-div {
-	background: #0bd;
-	width: 300px;
-	height: 200px;
-}
 body {
 	background-color: #30d5c8;
 	background-image: url(images/umi.png);
 	background-repeat: no-repeat;
-/*	background-size: cover;
- */
+	background-size: cover;
 }
 
 h1 {
 	background-color: #03a5fc;
 	font-family: 'Hachi Maru Pop', cursive;
 	color: #65e6ca;
+	whidth: 50%;
 }
 
 h2 {
