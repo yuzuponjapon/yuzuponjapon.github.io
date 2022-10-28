@@ -6,6 +6,9 @@ body {
 	background-size: cover;
 }
 
+div {
+	whidth: 50%;
+}
 h1 {
 	background-color: #03a5fc;
 	font-family: 'Hachi Maru Pop', cursive;
