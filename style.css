@@ -13,20 +13,20 @@ h1 {
 	width: 30%;
 	margin-top: 30px;
 	margin-left: 200px;
-	padding: 30px;
+	padding: 20px;
 }
 
 h2 {
-	font-family: 'Hachi Maru Pop', cursive;
 	background-color: #05c822;
+	font-family: "Nikukyu";
 	width : 50%;
 	color: navy;
 }
 
 
 p {
-	color: rgba(252,186,3,1);
-	font-family: "Nikukyu";
+	font-family: 'Hachi Maru Pop', cursive;
+	color: rgba(52,76,235,1);
 	background-color: rgba(252,236,3,1);
-	width: 200px;
+	padding: 15px;
 }
