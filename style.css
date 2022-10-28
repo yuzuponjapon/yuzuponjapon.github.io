@@ -10,7 +10,9 @@ h1 {
 	background-color: #03a5fc;
 	font-family: 'Hachi Maru Pop', cursive;
 	color: #65e6ca;
+<--!
 	width: 30%;
+-->
 	margin-top: 30px;
 	margin-left: 200px;
 	padding: 20px;
@@ -29,4 +31,7 @@ p {
 	color: rgba(52,76,235,1);
 	background-color: rgba(252,236,3,1);
 	padding: 15px;
+	border-width; medium;
+	border-style: solid;
+	border-color: rgb(52,76,235);
 }
