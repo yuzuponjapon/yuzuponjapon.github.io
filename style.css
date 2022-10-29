@@ -41,3 +41,9 @@ ol {
 	list-style-type: circle;
 	list-style-position: inside;
 }
+.blue {
+	color: rgb(0,0,255);
+}
+.red {
+	color: rgb(255,0,0);
+}
