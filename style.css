@@ -44,6 +44,6 @@ ol {
 .blue {
 	color: rgb(0,0,255);
 }
-.red {
-	color: rgb(255,0,0);
+#orange {
+	color: #fc9d53;
 }
