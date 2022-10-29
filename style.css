@@ -36,6 +36,7 @@ p {
 	border-color: rgb(52,76,235);
 }
 ol {
+	width: 200px;
 	background-color: rgb(3,2252,140);
 	list-style-type: circle;
 	list-style-position: inside;
