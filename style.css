@@ -34,3 +34,6 @@ p {
 	border-style: solid;
 	border-color: rgb(52,76,235);
 }
+ol {
+	list-style-type: circle;
+}
