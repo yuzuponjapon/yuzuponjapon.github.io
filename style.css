@@ -47,6 +47,9 @@ ol {
 #orange {
 	color: #fc9d53;
 }
+.container {
+	display: flex;
+}
 .item {
 	background: #0bd;
 	color: #fff;
