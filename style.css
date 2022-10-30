@@ -47,3 +47,9 @@ ol {
 #orange {
 	color: #fc9d53;
 }
+.item {
+	background: #0bd;
+	color: #fff;
+	margin: 10px;
+	padding: 10px;
+}
