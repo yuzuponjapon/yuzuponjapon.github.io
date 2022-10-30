@@ -49,7 +49,9 @@ ol {
 }
 .container {
 	display: flex;
-	flex-direction: column-reverse;
+<!--	flex-direction: row-reverse;
+-->
+		flex-wrap: wrap-reverse;
 }
 .item {
 	background: #0bd;
