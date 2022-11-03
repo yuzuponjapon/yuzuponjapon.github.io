@@ -7,12 +7,21 @@ html {
 }
 
 body {
-/* HEADER
------------------------*/
 	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGthic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
 	line-height: 1.7;
 	color: #432;
 
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width; 100%;
+}
+
+/* HEADER
+----------------------- */
 .logo {
 	width: 210lpx;
 	margin-top: 14px;
@@ -30,12 +39,9 @@ body {
 .main-nav a:hover {
 	color: #0bd;
 }
-a {
-	text-decoration: none;
-}
-
-img {
-	max-width; 100%;
+.page-header {
+	display: flex;
+	justify-content: space-between;
 }
 
 
