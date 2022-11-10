@@ -33,6 +33,9 @@ img {
 	margin-top: 34px;
 	list-style: none;
 }
+.main-nav li {
+	margin-left: 36px;
+}
 .main-nav a {
 	color: #432;
 }
