@@ -21,7 +21,7 @@ img {
 }
 
 /* HEADER
------------------------ */
+------------------------------ */
 .logo {
 	width: 210px;
 	margin-top: 14px;
@@ -61,4 +61,12 @@ img {
 .home-content p {
 	font-size: 1.125;
 	margin: 10px 0 42px;
+}
+
+/* 見出し */
+.page-title {
+	font-size: 5rem;
+	font-mamily: 'Philosopher', serif;
+	text-transform: uppercase;
+	font-weight; normal;
 }
