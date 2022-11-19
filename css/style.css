@@ -65,8 +65,17 @@ img {
 
 /* 見出し */
 .page-title {
-	font-size: 5rem;
-	font-mamily: 'Philosopher', serif;
+	font-size: 1rem;
+/*	font-family: 'Charm', cursive;
+*/
+	font-family: 'Philosopher', serif;
 	text-transform: uppercase;
-	font-weight; normal;
+	font-weight: normal;
+}
+
+/* ボタン */
+.button:hover {
+	background: #0090aa;
+}
+
 }
