@@ -85,10 +85,27 @@ img {
 }
 
 #home {
+	/*
 	background-image: url(../images/coffee.jpg);
-	min-height: 100vh;
+*/	
+	background-image: url(../images/coffee.jpg),linear-gradient(#c9ffbf, #ffafbd);
+	background-blend-mode: luminosity;
+    min-height: 100vh;
 }
 
 #home .page-title {
 	text-transform: none;
+}
+
+
+/* NEWS
+--------------------------------------*/
+#news {
+	background-image: url(../images/news2.jpeg);
+	height: 270px;
+	margin-bottom: 40px;
+}
+
+#news .page-title {
+	text-align: center;
 }
