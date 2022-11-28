@@ -66,10 +66,9 @@ img {
 /* 見出し */
 .page-title {
 	font-size: 5rem;
-/*	font-family: 'Charm', cursive;
-*/
-	font-family: 'Philosopher', serif;
 	text-transform: uppercase;
+	font-family: 'Philosopher', serif;
+	
 	font-weight: normal;
 }
 
