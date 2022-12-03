@@ -186,3 +186,12 @@ aside {
 	margin-left: 120px;
 	color: black;
 }
+
+article img {
+	margin-bottom: 20px;
+}
+
+article p {
+	margin-bottom: 1rem;
+	color: black;
+}
