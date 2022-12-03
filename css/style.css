@@ -102,6 +102,8 @@ img {
 }
 
 
+
+
 /* NEWS
 --------------------------------------*/
 #news {
@@ -124,4 +126,23 @@ footer {
 footer p {
 	color: #fff;
 	font-size: 0.875rem;
+}
+
+/* 記述部分 */
+article {
+	width: 74%;
+	color: #fff;
+
+}
+
+/* サイドバー */
+aside {
+	width: 22%;
+	color: #fff;
+}
+
+.news-contents {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
 }
