@@ -68,11 +68,17 @@ img {
 	font-size: 5rem;
 	text-transform: uppercase;
 	font-family: 'Philosopher', serif;
-	
 	font-weight: normal;
 }
 
 /* ボタン */
+.button {
+	font-size: 1.375rem;
+	background: #0bd;
+	color: #fff;
+	border-radius: 5px;
+	padding: 18px 32px;
+}
 .button:hover {
 	background: #0090aa;
 }
@@ -87,8 +93,7 @@ img {
 	/*
 	background-image: url(../images/coffee.jpg);
 */	
-	background-image: url(../images/coffee.jpg),linear-gradient(#c9ffbf, #ffafbd);
-	background-blend-mode: luminosity;
+	background-image: url(../images/coffee.jpg);
     min-height: 100vh;
 }
 
