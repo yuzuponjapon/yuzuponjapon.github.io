@@ -204,11 +204,26 @@ article p {
 	font-weight: normal;
 }
 
-.sub-menu-li {
-	padding: 8px 8px;
-}
-
 aside p {
 	padding: 12px 10px;
 	color: black;
+}
+
+.sub-menu {
+	margin-bottom: 60px;
+	list-style: none;
+}
+
+.sub-menu li {
+	border-bottom: 1px #ddd solid;
+}
+
+.sub-menu a {
+	color: #432;
+	padding: 10px;
+	display: block;
+}
+
+.sub-menu a:hover {
+	color: #0bd;
 }
