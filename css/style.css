@@ -227,3 +227,13 @@ aside p {
 .sub-menu a:hover {
 	color: #0bd;
 }
+
+
+
+/* レスポンシブ */
+
+@media (max-width: 600) {
+	h1 {
+		color: #0bd;
+	}
+}
