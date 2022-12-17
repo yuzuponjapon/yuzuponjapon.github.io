@@ -233,7 +233,7 @@ aside p {
 /* レスポンシブ */
 
 @media (max-width: 600) {
-	h1 {
+	h2 {
 		color: #0bd;
 	}
 }
