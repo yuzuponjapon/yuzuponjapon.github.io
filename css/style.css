@@ -254,4 +254,13 @@ aside p {
 		flex-direction: column;
 		align-items: center;
 	}
+
+	/* NEWS */
+	.news-contents {
+		flex-direction: colulmn;
+	}
+	article,
+	aside {
+		width: 100%;
+	}
 }
