@@ -257,7 +257,7 @@ aside p {
 
 	/* NEWS */
 	.news-contents {
-		flex-direction: colulmn;
+		flex-direction: column;
 	}
 	article,
 	aside {
