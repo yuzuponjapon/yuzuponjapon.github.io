@@ -130,15 +130,18 @@ footer p {
 
 /* 記述部分 */
 article {
-	width: 74%;
+	width: 55%;
 	color: #fff;
 
 }
 
 /* サイドバー */
 aside {
-	width: 22%;
+	width: 20%;
 	color: #fff;
+}
+.ad {
+	width: 15%;
 }
 
 .news-contents {
