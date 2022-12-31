@@ -132,16 +132,18 @@ footer p {
 article {
 	width: 55%;
 	color: #fff;
-
+	order: 2;
 }
 
 /* サイドバー */
 aside {
 	width: 20%;
 	color: #fff;
+	order: 3;
 }
 .ad {
 	width: 15%;
+	order: 1;
 }
 
 .news-contents {
