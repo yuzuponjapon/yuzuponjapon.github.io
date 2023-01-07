@@ -1,17 +1,24 @@
-<!DOCTYPE htmml>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
     <head>
-        <meta charset="UTF-8" /?
-        <title>サンプル</title>
+        <meta charset="UTF-8" />
+        <title>サンプ</title>
+        <script>
+            window.onload = function(){
+                console.dir(window);
+                var button = document.getElementById("button");
+                console.dir(button);
+                button.onclick = function(){
+                    var elem = document.getElementById("sample");
+                    console.dir(elem);
+                    elem.textContent = "書き換え";
+                    console.dir(elem);
+                }
+            };
+        </script>
     </head>
     <body>
-        <script>
-            var date = new Date();
-            console.log(date.toLocaleString());
-            
-            var str = navigator.platform + "\n"
-            + navigator.userAgent + "\n";
-            window.alert(str);
-        </script>
+        <p id="sample">最初の題</p>
+        <input id="button" type="button" value="題変更">
     </body>
 </html>
