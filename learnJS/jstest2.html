@@ -14,13 +14,12 @@
 		<link href="css/style.css" rel="stylesheet">
 		<link rel="icon" type="image/png" href="images/logo3.png">
 		<script>
-            window.onload = function(){
-                var elems = document.getElementsByTagName("li");
-                for(var i=0; i<elems.length; i++){
-                    var elem = elems[i];
-                    console.dir(elem);
-                }
-            };
+			var elems = document.getElementsByTag("li");
+			for(var i = 0; i < elems.length; i++) {
+				var elem = elems[i].TextContent;
+				console.log(elem);
+			}
+
         </script>
 	</head>
 

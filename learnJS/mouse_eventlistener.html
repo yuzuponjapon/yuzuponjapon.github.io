@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8" />
+        <title>イベント this</title>
+        <script>
+            window.addEventListener("DOMContentLoaded",function(){
+
+                var image = document.getElementById("catImg");
+
+                image.addEventListener("mouseover", function(event){
+                    this.src = "../images/neko.jpg";
+                });
+
+                image.addEventListener("mouseout",function(event){
+                    this.src = "../images/test2.jpg";
+                });
+            });
+        </script>
+        <body>
+            <img id="catImg" src="../images/test2.jpg"><br>
+        </body>

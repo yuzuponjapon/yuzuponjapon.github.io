@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>イベントリスナー</title>
+        <script>
+            window.addEventListener("DOMContentLoaded",function(){
+                var button = document.getElementById("button");
+                button.addEventListener("click",function() {
+                    window.alert("クリック");
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <p id="sample">要素</p>
+        <input type="button" id="button" value="click!">
+    </body>
+</html>
