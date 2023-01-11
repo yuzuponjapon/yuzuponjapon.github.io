@@ -6,8 +6,10 @@
 
     <script>
         window.addEventListener("DOMContentLoaded",function(){
+            //セレクトボックスのオブジェクトを取得
             var areaSelect = document.getElementById("area");
             var prefSelect = document.getElementById("pref");
+            //都道府県の配列
             var prefList = [
                 ["北海道","青森","岩手"],
                 ["東京","茨城"],
@@ -18,8 +20,27 @@
                 ["福岡","佐賀","長崎"]
             ];
 
+            //地方のセレクトボックスが選択された際の処理
+            areaSelect.addEventListener("change",function(event){
+                //都道府県セレクトボックスを空にする
+                prefSelect.innerHTML ="";
 
-        })
+                //「選択してください」が選択された際は処理をここで中断
+                if(this.value == "") return;
+
+                //選択した地方の都道府県リスト
+                var list = prefList[this.value];
+                //都道府県リストから選択項目を作成
+                for(var i=0; i<list.length; i++) {
+                    var option = document.createElement('option');
+                    option.value = i;
+                    option.text = list[i];
+                    prefSelect.appentdChild(option);
+                }
+            });
+
+
+        });
 
     </script>
 </head>
