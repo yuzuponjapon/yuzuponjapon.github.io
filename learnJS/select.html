@@ -9,6 +9,8 @@
             //セレクトボックスのオブジェクトを取得
             var areaSelect = document.getElementById("area");
             var prefSelect = document.getElementById("pref");
+
+console.log(areaSelect);
             //都道府県の配列
             var prefList = [
                 ["北海道","青森","岩手"],
@@ -30,12 +32,14 @@
 
                 //選択した地方の都道府県リスト
                 var list = prefList[this.value];
+console.log(this.value);
                 //都道府県リストから選択項目を作成
                 for(var i=0; i<list.length; i++) {
                     var option = document.createElement('option');
+console.dir(option);
                     option.value = i;
                     option.text = list[i];
-                    prefSelect.appentdChild(option);
+                    prefSelect.appendChild(option);
                 }
             });
 
