@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>画像検索</title>
+    <script>
+        window.addEventListener("DOMContentLoaded",function() {
+            var button = document.getElementById("button");
+            // ボタン押下
+            button.addEventListener("click", function(){
+                // キーワード取得
+                var input = document.getElementById("keyword");
+                var keyword = input.value;
+
+                //scriptタグ生成
+                var script = document.createElement("script");
+                script.src="https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=" + encodeURIComponent(keyword);
+                document.body.appendChild(script);
+                document.body.removeChild(script);
+            });
+        });
+
+        function jsonFlickrFeed(data) {
+            var photo_list = document.getElementById("photo_list");
+            photo_list.innerHtml = "";
+            for(i=0;i<data.items.length;i++) {
+                var item = data.items[i];
+console.dir(item);
+                var img = document.createElement("img");
+                img.src = item.media.m;
+                photo_list.appendChild(img);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="text" id="keyword" name="keyword">
+    <input type="button" id="button" value="検索">
+    <div id="photo_list"></div> 
+</body>

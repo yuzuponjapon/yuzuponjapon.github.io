@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>flickr_sample</title>
+</head>
+
+<script>
+    function jsonFlickrFeed(data) {
+        for(i=0;i<data.items.length;i++) {
+            var item = data.items[i];
+            console.log(item.title);
+            console.log(item.tags);
+            console.log(item.link);
+        
+        }
+    }
+</script>
+<script src="https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=dog"></script>
