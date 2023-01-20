@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>calendar</title>
+
+    <script>
+        window.onload = function() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+
+            //当月の表示
+            var table_title = year+"年"+month+"月";
+            var captionHtml = "<caption>"+table_title+"</caption>";
+
+            //曜日行作成
+            var weekdays = ["日","月","火","水","木","金","土"];
+            var weekdaysStr = "<tr>";
+            for (var i=0; i < 7; i++) {
+                if(i==0) {
+                    weekdaysStr += "<td class='sun'>" + weekdays[i] + "</td>";
+                }else if(i==6) {
+                    weekdaysStr += "<td class='sat'>" + weekdays[i] + "</td>";
+                }else {
+                    weekdaysStr += "<td>" + weekdays[i] + "</td>";
+                }
+            }
+            weekdaysStr += "</tr>";
+
+            //曜日行作成２
+            /***
+            var weekdays = 
+                "<tr>
+                    <td class = 'sun'>日</td>
+                    <td>月</td>
+                    <td>火</td>
+                    <td>水</td>
+                    <td>木</td>
+                    <td>金</td>
+                    <td class='sat'>土</td>"
+            ***/
+
+            //当月１日の日付を取得
+            var firstDate = new Date(year, month - 1, 1);
+
+            //翌月０日を指定して、当月末日を取得
+            var lastDate = new Date(year, month, 0);
+
+            //カレンダーの日付セル部分作成
+            var htmlStr = "<tr>";
+            //当月１日の曜日
+            var startWeekDay = firstDate.getDay();
+            //１日まで空白で埋める
+            for(var i=0; i < startWeekDay; i++) {
+                htmlStr += "<td>&nbsp;</td>";
+            }
+            
+            //１日から月末日までループ
+            for(var i=1; i <= lastDate.getDate(); i++) {
+                //当月i日のDateオブジェクトを生成
+                var date = new Date(year, month-1, i);
+                //i日の曜日を取得
+                var weekDay = date.getDay();
+
+                //日を取得
+                var cellStr = date.getDate();
+                //日曜日の場合は行の開始なので<tr>開始タブ
+                if(weekDay == 0) htmlStr += "<tr>";
+                
+                if(weekDay == 0) {
+                    htmlStr += "<td class='sun'>";
+                }else if(weekDay == 6) {
+                    htmlStr += "<td class='sat'>";
+                }else {
+                    htmlStr += "<td>";
+                }
+                htmlStr += cellStr + "</td>";
+
+                //土曜日の場合は</tr>終了タグ
+                if(weekDay == 6) {
+                    htmlStr += "</tr\n>";
+                }
+            }
+
+            //月末日の曜日
+            var lastDayWeek = lastDate.getDay();
+
+            //月末日が土曜日でない場合は空白を埋める
+            if(lastDayWeek != 6) {
+                //土曜日までのループ
+                for(var i = lastDayWeek + 1; i <= 6; i++) {
+                    htmlStr += "<td>&nbsp;</td>"
+                }
+                htmlStr +="</tr>";
+            }
+            document.getElementById("calendar").innerHTML =
+                    "<table>" + captionHtml + weekdaysStr + htmlStr + "</table>";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="calendar" class="calendar"></div>
+</body>
