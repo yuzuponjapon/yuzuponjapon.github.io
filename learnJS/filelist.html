@@ -1,0 +1,14 @@
+<!DOCDYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>file list</title>
+    <script>
+        CR = String.fromCharCode(13);
+        folderRef = new Folder("../learnJS/")
+        fileList = folderRef.getFiles();
+        for(i=0;i<fileList.length;i++){
+            console.log(fileList[i]);
+        }
+    </script>
+</head>
