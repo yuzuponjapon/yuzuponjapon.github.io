@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* 共通部分
+-----------------------*/
+html {
+	font-size: 100%;
+}
+
+.sun {
+	color: red;
+}
+
+.sat {
+	color: blue;
+}
