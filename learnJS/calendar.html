@@ -163,13 +163,22 @@
 
 	<body>
 		<div class="frame-box">
+
+			//カレンダー表示部
 			<div class="calendar-box">
+				//カレンダー部分
 				<div id="calendar" class="calendar"></div>
 			</div>
+
+			//日記表示部
 			<div class="diary-box">
+				//日付表示部分
 				<div id="diary_date" class="diary_date"></div>
+				//日付入力部分
 				<input type="text" id="diary_title"><br><br>
+				//日記入力部分
 				<textarea id="diary_body" rows="10" cols="18"></textarea><br><br>
+				//保存ボタン表示
 				<input type="button" id="button" onclick="onSave(this)" value="保存">
 			</div>
 		</div>
