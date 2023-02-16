@@ -161,115 +161,24 @@
 	</head>
 
 
-
-
-
-
-		
-			
-
-		
-
-//*********************************************
-**************************************************
-****************************************************/
-            //当年月を表示
-            var table_title = year + "年" + month + "月";
-            var captionHtml = "<caption>" + table_title + "</caption>";
-
-
-            //曜日行表示
-            //var weekdays = ["日","月","火","水","木","金","土"];
-            var weekdaysStr = "<tr>";
-            weekdaysStr += "<td class = 'sun'>日</td>";
-            weekdaysStr += "<td>月</td>";
-            weekdaysStr += "<td>火</td>";
-            weekdaysStr += "<td>水</td>";
-            weekdaysStr += "<td>木</td>";
-            weekdaysStr += "<td>金</td>";
-            weekdaysStr += "<td class = 'sat'>土</td>";
-            weekdaysStr += "</tr>";
-
-
-            //日付行表示
-            var htmlStr = "<tr>";
-            //当月１日の曜日取得
-            var startWeekDay = firstDate.getDay();
-            //１日までを空白で埋める
-            for(var i = 0; i < startWeekDay; i++) {
-               htmlStr += "<td>&nbsp;</td>"; 
-            }
-            //１日から月末日までループ
-            for(var i = 1; i <= lastDate.getDate(); i++) {
-                //当月i日のDateオブジェクト生成
-                var date = new Date(year, month - 1, i);
-                //i日の曜日を取得
-                var weekDay = date.getDay();
-                cellStr = "<u>" + i + "</u>";
-
-                //日曜日の場合は行の開始なのでtrタグ
-                if(weekDay == 0) {
-                    htmlStr += "<tr>";
-                    htmlStr += "<td class='sun'>";
-                }else if(weekDay == 6) {
-                    htmlStr += "<td class='sat'>";
-                }else {
-                    htmlStr += "<td>";
-                }
-
-                htmlStr += cellStr + "</td>";
-
-                if(weekDay == 6) {
-                    htmlStr += "</tr>\n";
-                }
-            }
-            
-            //月末の空白埋め
-            var lastDayWeek = lastDate.getDay();
-            if(lastDayWeek != 6) {
-                for(var i=lastDayWeek; i < 6; i++) {
-                    htmlStr += "<td>&nbsp;</td>";
-                }
-                htmlStr += "<tr>";
-            }
-
-            //書き出し
-            document.getElementById("calendar").innerHTML =
-                "<table>" + captionHtml + weekdaysStr + htmlStr + "</table>";
-
-        }
-
-
-		//指定した日付の日記を表示
-		function presetDiary(dateStr){
-			//ボタンのdate属性にキーの日付部分を指定する
-			var button = document.getElementById("button");
-			button.setAttribute("data-diary", dateStr);
-			
-			//日記の日付を表示
-			var diary_date = document.getElementById("diary_date");
-			diary_date.innerHTML = dateStr;
-
-			//localStorageから日記の本文とタイトルを取得
-			var title = localStorage[dateStr+"_title"];
-			var body = localStorage[dateStr+"_body"];
-
-			//日記の入力欄を取得
-			var diary_title = document.getElementById("diary_title");
-			var diary_body = document.getElemntById("diary_body");
-
-		}
-
-    </script>
-<head>
-	<div class="frame-box">
-		<div class="calendar-box">
-    		<div id="calendar" class="calendar"></div>
+	<body>
+		<div class="frame-box">
+			<div class="calendar-box">
+				<div id="calendar" class="calendar"></div>
+			</div>
+			<div class="diary-box">
+				<div id="diary_date" class="diary_date"></div>
+				<input type="text" id="diary_title"><br><br>
+				<textarea id="diary_body" rows="10" cols="18"></textarea><br><br>
+				<input type="button" id="button" onclick="onSave(this)" value="保存">
+			</div>
 		</div>
-		<div class="diary-box">
-			<div id="diary_date" class="diary_date"></div>
-		<input type="text" id="diary_title"><br><br>
-			<textarea id="diary_body" rows="10" cols="18"></textarea><br><br>
-			<input type="button" id="button" onclick="onSave(this)" value="保存">
-	</div>
-</html>
+	</body>
+
+
+
+		
+			
+
+		
+
