@@ -47,14 +47,11 @@
 			
 			//ボタンのdata-date属性から日付文字列を取得
 			var dateStr = obj.getAttribute("data-date");
-console.log(obj);
 
 			//日記の入力欄を取得
 			var diary_title = document.getElementById("diary_title").value;
 			var diary_body  = document.getElementById("diary_body" ).value;
 				
-console.log(diary_title);
-console.log(diary_body);
 			//日記を保存
 			localStorage[dateStr+"_title"] = diary_title;
 			localStorage[dateStr+"_body"]  = diary_body;
@@ -184,9 +181,9 @@ console.dir(this);
 				<!-- 日付表示部分 -->
 				<div id="diary_date" class="diary_date"></div>
 				<!-- 日付入力部分 -->
-				<input type="text" id="diary_title"><br><br>
+				<input type="text" id="diary_title">
 				<!-- 日記入力部分 -->
-				<textarea id="diary_body" rows="10" cols="18"></textarea><br><br>
+				<textarea id="diary_body" rows="10" cols="22"></textarea><br>
 				<!-- 保存ボタン表示 -->
 				<input type="button" id="button" onclick="onSave(this)" value="保存">
 			</div>
