@@ -15,6 +15,18 @@ html {
 }
 
 .frame-box {
+	width: 400px;
+	margin: 5px 0 0 5px;
+	padding: 10px 10px 10px 20px;
 	background: #0bd;
 	display: flex;
+}
+
+
+.diary-box {
+	margin-left: 30px;
+}
+
+#diary_body {
+	margin-top: 5px;
 }
