@@ -26,6 +26,11 @@ img {
 	width: 210px;
 	margin-top: 14px;
 }
+.nav {
+	display: flex;
+	font-size: 1.25rem;
+	margin-top: 34px;
+}
 .main-nav {
 	display: flex;
 	font-size: 1.25rem;
