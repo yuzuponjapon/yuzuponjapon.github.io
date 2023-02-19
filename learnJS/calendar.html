@@ -47,15 +47,18 @@
 			
 			//ボタンのdata-date属性から日付文字列を取得
 			var dateStr = obj.getAttribute("data-date");
+console.log(obj);
 
 			//日記の入力欄を取得
-			var diary_title = document.getElementById("diary_title").valuse;
-			var diary_body  = document.getElementById("diary_body" ).valuse;
+			var diary_title = document.getElementById("diary_title").value;
+			var diary_body  = document.getElementById("diary_body" ).value;
 				
+console.log(diary_title);
+console.log(diary_body);
 			//日記を保存
-			localstorage[dateStr+"_title"] = diary_title;
-			localstorage[dateStr+"_body"]  = diary_body;
-		
+			localStorage[dateStr+"_title"] = diary_title;
+			localStorage[dateStr+"_body"]  = diary_body;
+
 			//完了メッセージを表示
 			window.alert("日記を投稿しました");
 
@@ -76,7 +79,6 @@
 
             //当月１日の日付を取得
             var firstDate = new Date(year, month - 1, 1);
-
             //当月末日の日付を取得
             var lastDate = new Date(year, month, 0);
 
@@ -108,6 +110,12 @@
 
 			//１日までを空白で埋める
 			for (var i = 0; i < startWeekDay; i++) {
+				htmlStr += "<td>&nbsp;</td>";
+			}
+
+			
+			//１日から月末日までループ
+			for(var i=1; i <= lastDate.getDate(); i++) {
 
 				//当月i日のDateオブジェクトを生成
 				var date = new Date(year, month-1, i);
