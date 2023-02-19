@@ -15,5 +15,6 @@ html {
 }
 
 .frame-box {
+	background: #0bd;
 	display: flex;
 }
