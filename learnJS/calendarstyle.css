@@ -13,3 +13,7 @@ html {
 .sat {
 	color: blue;
 }
+
+.frame-box {
+	display: flex;
+}
