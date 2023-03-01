@@ -48,6 +48,22 @@ img {
 	transition: color 3s;
 	color: #0bd;
 }
+.drop {
+	display: none;
+	width: 100;
+	position: absolute;
+	top: 60px;
+	left: 0;
+}
+.gnavi_list:hover .drop_list {
+	display: block;
+}
+.drop_list {
+	transition: all .3s;
+	position: relative;
+}
+
+
 .page-header {
 	display: flex;
 	justify-content: space-between;
