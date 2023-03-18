@@ -30,3 +30,26 @@ html {
 #diary_body {
 	margin-top: 5px;
 }
+/* 戻るボタン　練習 */
+.return {
+	position:relative;
+	top: 30px;
+	font-size: 30px;
+	color: pink;
+	background: blue;
+	border-style: solid;
+	border-color: red;
+	border-width: 30px;
+	border-radius: 20px;
+	border-image-source: url(../images/slice.jpg);
+	border-image-slice: 20;
+	/*
+	border-image-repeat: round;
+	*/
+}
+.return:hover {
+	font-size: 30px;
+	color: yellow;
+	border-color: black;
+	background: green;
+}
