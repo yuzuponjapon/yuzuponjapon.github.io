@@ -11,7 +11,6 @@ body {
 	line-height: 1.7;
 	color: #432;
 }
-
 a {
 	text-decoration: none;
 }
@@ -26,41 +25,49 @@ img {
 	width: 210px;
 	margin-top: 14px;
 }
-.nav {
-	font-size: 1.25rem;
-	margin-top: 34px;
-}
 .main-nav {
 	display: flex;
+	justify-content: space-between;
 	font-size: 1.25rem;
 	text-transform: uppercase;
-	margin: auto;
-	/*margin-top: 34px;*/
+	margin-top: 36px;
 	list-style: none;
+	padding-left: 0;
 }
-.main-nav li {
-	margin-left: 36px;
-}
-.main-nav a {
-	color: #000;
+.nav-list a {
+	color: black;
 }
 .main-nav a:hover {
-	transition: color 3s;
-	color: #0bd;
+	color: red;
 }
+.nav-list {
+	position: relative;
+	margin-left: 36px;
+}
+.page-header {
+	display: flex;
+	justify-content: space-between;
+}
+.wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;
+}
+
+/* ドロップダウン　*/
 .drop {
-	display: none;
-	width: 100;
+	display: none; 
+	list-style: none;
+	padding-left: 0;
 	position: absolute;
-	top: 60px;
+	top: 33px;
 	left: 0;
 }
-.gnavi_list:hover .drop_list {
+.nav-list:hover .drop{
 	display: block;
 }
-.drop_list {
-	transition: all .3s;
-	position: relative;
+.drop_list li{
+	padding-left: 0;
 }
 
 
