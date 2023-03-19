@@ -32,8 +32,10 @@ html {
 }
 /* 戻るボタン　練習 */
 .return {
+	/*通常表示位置からの位置指定*/
 	position:relative;
 	top: 30px;
+
 	font-size: 30px;
 	color: pink;
 	background: blue;

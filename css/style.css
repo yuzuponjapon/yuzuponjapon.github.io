@@ -327,8 +327,77 @@ aside p {
 	.post-ca {
 		margin-left: 80px;
 	}
-}
+
+	/* MENU */
+	.big-box {
+		grid-column: auto;
+		grid-row: auto;
+	}
+	.big-box img {
+		height: auto;
+	}
+
+	
+} /* モバイル版 */
 
 
 /* MENU
 ----------------------------------------------------------------------------*/
+/*
+#menu {
+	min-height: 95vh;
+}
+*/
+.menu-content {
+	max-width: 560px;
+	/*
+	margin-top: 5%;
+	*/
+}
+.menu-content .page-title {
+	text-align: center;
+}
+.menu-content p {
+	font-size: 1.125rem;
+	margin: 10px 0 0;
+}
+.grid {
+	display: grid;
+	gap: 26px;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	margin-top: 6%;
+	margin-bottom: 50px;
+}
+.item {
+	display: flex;
+	height: 60px;
+	
+}
+.item a {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: #3cb371;
+	font-size: 1.375rem;
+	border-radius: 10px;
+}
+.item a:hover {
+	background-color: #2e8b57;
+	color: white;
+}
+.coming-soon a{
+	background-color: #b0c4de;
+}
+/*
+.big-box {
+	grid-column: 1 / 3;
+	grid-row: 1 / 3;
+}
+.big-box img {
+	height: 93%;
+	width: 100%;
+	object-fit: cover;
+}
+*/
