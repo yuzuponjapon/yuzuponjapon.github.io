@@ -1,0 +1,11 @@
+@charset "utf-8";
+#doc {
+    width: 700px;
+    padding-left: 10px;
+    border-left-style: solid;
+    background-color: #ccffcc;
+    font-weight: bold;
+}
+.return {
+    margin-top: 10px;
+}

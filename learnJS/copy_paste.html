@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>コピペ</title>
+        <link rel="stylesheet" href="copy_paste.css">
+        <script>
+            window.onload = function(){
+                document.getElementById('button').onclick = () => {
+                    var text = document.getElementById('doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <pre id="doc">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;タイトル&lt;/title&gt;"
+        &lt;link rel="stylesheet" href="copy_paste.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <button type="button" class="button">コピー</button>
+        <!----
+		<a class="return" href="../menu.html">戻る</a>	
+        -->
+        <br>
+        <button class="return" type="button" onclick="location.href='../menu.html'">戻る</button>
+    </body>
+</html>
