@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>htmlテンプレート</title>
+        <link rel="stylesheet" href="./button.css">
+        <script>
+            window.onload = function(){
+                document.getElementById('html_button').onclick = () => {
+                    var text = document.getElementById('html_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+                document.getElementById('css_button').onclick = () => {
+                    var text = document.getElementById('css_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <a href="#" class="btn">ボタン</a>
+        <p class="tag">html</p>
+<pre id="html_doc" class="doc">
+&lt;a href="リンク先" class="クラス名"&gt;表示名&lt;/a&gt;
+</pre>
+        <button type="button" id="html_button" class="button">コピー</button>
+        <p class="tag">css</p>
+<pre id="css_doc" class="doc">
+.クラス名 {
+    margin: 30px;
+    width: 70px;
+    height: 30px;
+    padding: 10px 30px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    display: block;
+    text-decoration: none;
+    box-shadow: 3px -3px skyblue;
+    border-radius: 5px;
+}
+.クラス名:hover {
+    background-color:black;
+}
+</pre>
+        <button type="button" id="css_button" class="button">コピー</button>
+        <br>
+        <button class="return" type="button" onclick="location.href='../copy-menu.html'">戻る</button>
+    </body>
+</html>

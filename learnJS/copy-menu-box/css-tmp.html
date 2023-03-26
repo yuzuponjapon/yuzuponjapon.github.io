@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>htmlテンプレート</title>
+        <link rel="stylesheet" href="./copy-menu.css">
+        <script>
+            window.onload = function(){
+                document.getElementById('button').onclick = () => {
+                    var text = document.getElementById('doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <pre id="doc">
+@charset "utf-8";
+#id_name {
+    
+}
+.class_name{
+
+}
+        </pre>
+        <button type="button" id="button" class="button">コピー</button>
+        <!----
+		<a class="return" href="../menu.html">戻る</a>	
+        -->
+        <br>
+        <button class="return" type="button" onclick="location.href='../copy-menu.html'">戻る</button>
+    </body>
+</html>
