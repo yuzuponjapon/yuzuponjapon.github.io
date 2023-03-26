@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+html {
+	font-size: 100%;
+}
+
+.grid {
+	display: grid;
+	gap: 24px;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	margin: 60px;
+}
+.item {
+	display: flex;
+	height: 60px;
+	
+}
+.item a {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	justify-content: center;
+	align-items: center;
+	background-color: #3cb371;
+	font-size: 1.375rem;
+	border-radius: 10px;
+}
+.item a:hover {
+	background-color: #2e8b57;
+	color: white;
+}
+.coming-soon a{
+	background-color: #b0c4de;
+}
+/* フッター
+------------------------------------------*/
+footer {
+	background: #432;
+	text-align: center;
+	padding: 26px 0;
+}
+footer p {
+	color: #fff;
+	font-size: 0.875rem;
+}
