@@ -10,3 +10,11 @@
 .return {
     margin-top: 10px;
 }
+.tag {
+    margin-top: 20px;
+    display: block;
+    width: 100px;
+    background-color: #33ffcc;
+    text-align: center;
+}
+/*********************************/

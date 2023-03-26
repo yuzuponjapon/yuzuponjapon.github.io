@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8" />
-        <title>htmlテンプレート</title>
+        <title>button</title>
         <link rel="stylesheet" href="./button.css">
         <script>
             window.onload = function(){
@@ -33,20 +33,21 @@
         <p class="tag">css</p>
 <pre id="css_doc" class="doc">
 .クラス名 {
-    margin: 30px;
-    width: 70px;
-    height: 30px;
-    padding: 10px 30px;
-    text-align: center;
-    background-color: blue;
-    color: white;
-    display: block;
-    text-decoration: none;
-    box-shadow: 3px -3px skyblue;
-    border-radius: 5px;
+    margin: 30px;     /* ボタン周り余白 */
+    width: 70px;     /* ボタン幅 */
+    height: 30px;     /* ボタン高さ */
+    padding: 10px 30px;     /* ボタン内余白 */
+    text-align: center;     /* 表示文字中央よせ */
+    background-color: blue;    /* ボタン背景色 */
+    color: white;     /* 表示文字色 */
+    display: block;     /* 表示形式blockに変更 */
+    text-decoration: none;     /* アンダーライン非表示 */
+    box-shadow: 3px -3px skyblue;     /* 影 右下 マイナス値は反対側に影 */
+    border-radius: 5px;     /* 角丸め */
 }
 .クラス名:hover {
-    background-color:black;
+    background-color:black; /* カーソル選択時の背景色 */
+    color: yellow;     /* カーソル選択時の文字色 */
 }
 </pre>
         <button type="button" id="css_button" class="button">コピー</button>
