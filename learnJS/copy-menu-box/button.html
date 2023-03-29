@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <title>button</title>
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <link rel="stylesheet" href="./copy-menu.css">
         <link rel="stylesheet" href="./button.css">
         <script>
             window.onload = function(){
@@ -24,17 +26,18 @@
         </script>
     </head>
     <body>
-        <a href="#" class="btn">ボタン</a>
-        <p class="tag">html</p>
-<pre id="html_doc" class="doc">
+        <div class="wrap">
+            <a href="#" class="btn">ボタン</a>
+            <p class="html_tag">html</p>
+<pre id="html_doc" class="html_doc">
 &lt;a href="リンク先" class="クラス名"&gt;表示名&lt;/a&gt;
 </pre>
-        <button type="button" id="html_button" class="button">コピー</button>
-        <p class="tag">css</p>
-<pre id="css_doc" class="doc">
+            <button type="button" id="html_button" class="html_cp_btn">コピー</button>
+            <p class="css_tag">css</p>
+<pre id="css_doc" class="css_doc">
 .クラス名 {
     margin: 30px;     /* ボタン周り余白 */
-    width: 70px;     /* ボタン幅 */
+    width: 150px;     /* ボタン幅 */
     height: 30px;     /* ボタン高さ */
     padding: 10px 30px;     /* ボタン内余白 */
     text-align: center;     /* 表示文字中央よせ */
@@ -50,8 +53,8 @@
     color: yellow;     /* カーソル選択時の文字色 */
 }
 </pre>
-        <button type="button" id="css_button" class="button">コピー</button>
-        <br>
-        <button class="return" type="button" onclick="location.href='../copy-menu.html'">戻る</button>
+            <button type="button" id="css_button" class="css_cp_btn">コピー</button>
+            <button class="return" type="button" onclick="location.href='../copy-menu.html'">戻る</button>
+        </div>
     </body>
 </html>
