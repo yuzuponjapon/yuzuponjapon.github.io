@@ -8,8 +8,8 @@
 .html_tag {
     margin-top: 50px;
     width: 100px;
-    height: 25px;
-    padding-top: 5px;
+    height: 27px;
+    padding-top: 6px;
     text-align: center;
     background-color: rgba(255,165,0,1);
     color: white;
@@ -17,7 +17,7 @@
 }
 .html_doc {
     width: 1000px;
-    margin-top: 25px;
+    margin-top: 23px;
     padding: 15px;
     border-left-style: solid;
     background-color: rgba(255,165,0,.2);
@@ -26,7 +26,7 @@
 }
 .html_cp_btn {
     display: block;
-    margin-top: 25px;
+    margin-top: 23px;
     width: 60px;
     height: 23px;
     padding-top: 4px;
@@ -42,10 +42,10 @@
 
 /***** ｃｓｓ *****/
 .css_tag {
-    margin-top: 50px;
+    margin-top: 55px;
     width: 100px;
-    height: 25px;
-    padding-top: 4px;
+    height: 27px;
+    padding-top: 5px;
     background-color: rgba(0,165,221,1);
     text-align: center;
     color: white;
@@ -53,7 +53,7 @@
 }
 .css_doc {
     width: 1000px;
-    margin-top: 25px;
+    margin-top: 23px;
     padding: 15px;
     border-left-style: solid;
     background-color: rgba(0,165,221,.2);
@@ -65,7 +65,7 @@
     width: 60px;
     height: 23px;
     padding-top: 4px;
-    margin-top: 25px;
+    margin-top: 23px;
     background-color: rgba(0,165,221,.5);
     border-radius: 5px;
     font-size: .9rem;
