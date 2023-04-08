@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>centering</title>
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <link rel="stylesheet" href="./copy-menu.css">
+        <link rel="stylesheet" href="./centering.css">
+        <script>
+            window.onload = function(){
+                document.getElementById('html_button').onclick = () => {
+                    var text = document.getElementById('html_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+                document.getElementById('css_button').onclick = () => {
+                    var text = document.getElementById('css_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+<!-- html -------------------->
+            <div class="center_wrap">
+                <p>中央寄せ</p>
+                <p>子要素</p>
+            </div>
+<!---------------------------->
+            <p class="html_tag">html</p>
+<pre id="html_doc" class="html_doc">
+<!-- html copy --------------->
+&lt;div class="center_wrap"&gt;
+    &lt;p&gt;中央寄せ&lt;/p&gt;
+    &lt;p&gt;子要素&lt;/p&gt;
+&lt;/div&gt;
+<!---------------------------->
+</pre>
+            <button type="button" id="html_button" class="html_cp_btn">コピー</button>
+            <p class="css_tag">css</p>
+<pre id="css_doc" class="css_doc">
+<!-- css copy ---------------->
+.center_wrap {
+    height: 100px;     /* 枠の高さ */
+    width: 500px;     /* 枠の幅 */
+    background-color: aqua;     /* 枠の色 */
+    display: flex;     /* flexbox */ 
+    flex-direction: column;     /* 子要素が有った場合下に次々表示 */
+    justify-content: center;     /* 左右(主軸)中央寄せ */ 
+    align-items: center;     /* 上下(交差軸)中央寄せ */
+}
+<!---------------------------->
+</pre>
+            <button type="button" id="css_button" class="css_cp_btn">コピー</button>
+            <button class="return" type="button" onclick="location.href='../copy-menu.html'">戻る</button>
+        </div>
+    </body>
+</html>
