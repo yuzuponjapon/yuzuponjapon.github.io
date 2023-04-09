@@ -5,7 +5,7 @@
         <title>centering</title>
         <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
         <link rel="stylesheet" href="./copy-menu.css">
-        <link rel="stylesheet" href="./centering.css">
+        <link rel="stylesheet" href="./centering2.css">
         <script>
             window.onload = function(){
                 document.getElementById('html_button').onclick = () => {
@@ -46,14 +46,14 @@
             <p class="css_tag">css</p>
 <pre id="css_doc" class="css_doc">
 <!-- css copy ---------------->
+/* 子要素が複数の場合flexboxと表示位置がちょっと違う */
+
 .center_wrap {     /* 枠(親要素)に対して子要素の表示方法を指定する */
     height: 100px;     /* 枠の高さ */
     width: 500px;     /* 枠の幅 */
     background-color: aqua;     /* 枠の色 */
-    display: flex;     /* flexbox */ 
-    flex-direction: column;     /* 要素が複数有った場合下に次々表示 */
-    justify-content: center;     /* 左右(主軸)中央寄せ */ 
-    align-items: center;     /* 上下(交差軸)中央寄せ */
+    display: grid;     /* grid */ 
+    place-items: center;
 }
 <!---------------------------->
 </pre>

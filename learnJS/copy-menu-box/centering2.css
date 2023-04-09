@@ -1,0 +1,8 @@
+@charset "utf-8";
+.center_wrap {
+    height: 100px;
+    width: 500px;
+    background-color: aqua;
+    display: grid;
+    place-items: center;
+}
