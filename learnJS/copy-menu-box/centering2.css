@@ -2,7 +2,7 @@
 .center_wrap {
     height: 100px;
     width: 500px;
-    background-color: aqua;
+    background-color: darkturquoise;
     display: grid;
     place-items: center;
 }
