@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>dropdown</title>
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <link rel="stylesheet" href="./copy-menu.css">
+        <link rel="stylesheet" href="./dropdown3.css">
+        <script>
+            window.onload = function(){
+                document.getElementById('html_button').onclick = () => {
+                    var text = document.getElementById('html_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+                document.getElementById('css_button').onclick = () => {
+                    var text = document.getElementById('css_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+<!-- html -------------------->
+            <div class="drop_wrap">
+                <ul class="menu_lists">
+                    <li class="menu_list"><a class="menu_a" href="#">menu1</a>
+                        <ul class="dropdown_lists">
+                            <li class="dropdown_list"><a href="#">menu1-1</a></li>
+                            <li class="dropdown_list"><a href="#">menu1-2</a></li>
+                            <li class="dropdown_list"><a href="#">menu1-3</a></li>
+                            <li class="dropdown_list"><a href="#">menu1-4</a></li>
+                            <li class="dropdown_list"><a href="#">menu1-5</a></li>
+                        </ul>                
+                    </li>
+                    <li class="menu_list"><a class="menu_a"href="#">menu2</a>
+                        <ul class="dropdown_lists">
+                            <li class="dropdown_list"><a href="#">menu2-1</a></li>
+                            <li class="dropdown_list"><a href="#">menu2-2</a></li>
+                            <li class="dropdown_list"><a href="#">menu2-3</a></li>
+                        </ul>                
+                    </li>
+                    <li class="menu_list"><a class="menu_a"href="#">menu3</a></li>
+                </ul>
+            </div>
+<!---------------------------->
+            <p class="html_tag">html</p>
+<pre id="html_doc" class="html_doc">
+<!-- html copy --------------->
+&lt;div class="drop_wrap"&gt;
+    &lt;ul class="menu_lists"&gt;
+        &lt;li class="menu_list"&gt;&lt;a class="menu_a" href="#"&gt;menu1&lt;/a&gt;
+            &lt;ul class="dropdown_lists"&gt;
+                &lt;li class="dropdown_list"&gt;&lt;a href="#"&gt;menu1-1&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown_list"&gt;&lt;a href="#"&gt;menu1-2&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown_list"&gt;&lt;a href="#"&gt;menu1-3&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown_list"&gt;&lt;a href="#"&gt;menu1-4&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown_list"&gt;&lt;a href="#"&gt;menu1-5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;                
+        &lt;/li&gt;
+        &lt;li class="menu_list"&gt;&lt;a class="menu_a"href="#"&gt;menu2&lt;/a&gt;
+            &lt;ul class="dropdown_lists"&gt;
+                &lt;li class="dropdown_list"&gt;&lt;a href="#"&gt;menu2-1&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown_list"&gt;&lt;a href="#"&gt;menu2-2&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown_list"&gt;&lt;a href="#"&gt;menu2-3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;                
+        &lt;/li&gt;
+        &lt;li class="menu_list"&gt;&lt;a class="menu_a"href="#"&gt;menu3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+<!---------------------------->
+</pre>
+            <button type="button" id="html_button" class="html_cp_btn">コピー</button>
+            <p class="css_tag">css</p>
+<pre id="css_doc" class="css_doc">
+<!-- css copy ---------------->
+.drop_wrap {     /* 外枠の設定 */
+    width: 1000px;     /* 外枠の幅 */
+    height: 300;     /* 外枠の高さ */
+    font-size: 1.125rem;     /* 全体のフォントサイズ */
+    background-color: rgba(127,255,212,.4);
+    margin-top: 10px;
+}
+.menu_lists {     /* メニューの設定 */
+    width: 800px;
+    height: 300px;
+    display: flex;     /* メニュー項目を横並びに表示 */
+    padding: 20px 0 0 20px;     /* 外枠内メニューの表示位置 */
+}
+.menu_list {     /* メニュー項目の設定 */
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0,206,209,.7);
+    position: relative;     /* ドロップダウンメニュー表示の為の起点を設定 */
+}
+.menu_list a {     /* メニュー項目内 aタグ(ドロップダウンメニュー内 aタグも子要素なので反映する)の設定 */
+    width: 100%;     /* メニュー項目枠内全体で aタグのhoverが効くように aタグを広げる */
+    height: 100%;     /* 上に同じ */
+    border: solid 1px black;     /* 枠線表示 */
+    /* menu_listに枠線を指定すると aタグでのhover時に枠線上でhoverが切れドロップダウンが消える */
+    display: flex;     /* 上下左右中央寄せの為 aタグの表示方法変更 */
+    justify-content: center;     /* 左右中央寄せ */
+    align-items: center;      /* 上下中央寄せ */
+}
+.menu_lists :not(:first-child) .menu_a {
+    /* メニュー内最初のメニュー項目以外(２番目以降)の左側の枠線を消す
+    (隣の項目の枠線とダブって枠線が太くなるのを防ぐ為) */
+    /* menu_lists内 aタグに指定するとドロップダウンの aタグにも反映し左枠線が消えるのでクラス名での限定指定 */
+    border-left-style: none;
+} 
+.menu_list a:hover {     /* メニュー項目(ドロップダウンメニュー内 aタグも子要素なので反映する)hover時の設定 */
+    color: white;     /* 文字色変更 */
+    background-color: rgba(70,130,180,1);     /* 背景色変更 */
+}
+.dropdown_lists {     /* ドロップダウン表示設定 */
+    display: none;     /* 非表示にしておく */
+    position:absolute;     /* position: relative;で指定した位置(menu_listの左上角)を起点にする指定 */
+    top: 40px;     /* 起点から上40px空けて表示する(メニュー項目が高さ40pxなのでその下にドロップダウンが表示される) */ 
+}
+.dropdown_list {     /* ドロップダウンメニューの設定 */
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0,206,209,.7);
+}
+.dropdown_lists:not(:first-child) a { 
+    /* ドロップダウンメニュー内最初のメニュー項目以外(２番目以降)の上の枠線を消す
+    (上の項目の枠線とダブって枠線が太くなるのを防ぐ為) */
+    border-top-style: none;
+}
+.menu_list:hover .dropdown_lists {     /* メニュー項目をhoverした時ドロップダウンメニューを表示する */
+    display: block;
+}
+<!---------------------------->
+</pre>
+            <button type="button" id="css_button" class="css_cp_btn">コピー</button>
+            <button class="return" type="button" onclick="location.href='../copy-menu.html'">戻る</button>
+        </div>
+    </body>
+</html>
