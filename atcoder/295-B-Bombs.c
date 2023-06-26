@@ -13,12 +13,12 @@ int main(void)
         for(int j=0;j<C;j++) {
             if(B[i][j]=='.') continue;
             if(B[i][j]=='#') continue;
-            int range = B[i][j];
-            for(int k=i-range;k<i+range;k++) {
-                if(k<0 || R<k) continue;
-                for(int l=j-range;l<j+range;l++) {
-                    if(l<0 || C<l) continue;
-                    if(abs(k)+abs(l)<=range) {
+            int range = B[i][j]-48;
+            for(int k=i-range;k<=i+range;k++) {
+                if(k<0 || R<=k) continue;
+                for(int l=j-range;l<=j+range;l++) {
+                    if(l<0 || C<=l) continue;
+                    if(abs(k-i)+abs(l-j)<=range) {
                         if(B[k][l] == '#')
                             B[k][l] = '.';
                     }
