@@ -7,13 +7,30 @@ int main(void)
     int a[n][n];
     int b[n][n];
 
-    int i,j;
+    int i,j,x[n];
+    
     for(i=0;i<n;i++) {
-        for(j=0;j<n;j++) {
-            scanf("%d",a[i][j]);
+        scanf("%d",&x[i]);
+        for(j=1;j<=n;j++) {
+            x[i]%(10*j)    
+
             b[i][j] = a[i][j];
         }
     } 
+    for(i=0;i<n;i++) {
+        for(j=0;j<n;j++) {
+            printf("%d",a[i][j]);
+        }
+        printf("\n");
+    }
+        printf("\n");
+        printf("\n");
+    for(i=0;i<n;i++) {
+        for(j=0;j<n;j++) {
+            printf("%d",b[i][j]);
+        }
+        printf("\n");
+    }
 
     b[0][0] = a[1][0];
     for(i=1;i<n;i++) 
@@ -27,7 +44,7 @@ int main(void)
         b[n-1][i-1] = a[n-1][i];
 
     for(i=n-1;i>0;i--)
-        b[i-1][0] = [i][0];
+        b[i-1][0] = a[i][0];
 
 
     for(i=0;i<n;i++) {
