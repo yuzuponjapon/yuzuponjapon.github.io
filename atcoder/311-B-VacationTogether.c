@@ -4,27 +4,25 @@ int main(void)
     int n,d;
     int scan = scanf("%d%d",&n,&d);
 
-    char s[n][d];
-
+    char tmp[d];
+    int cnt[100] = {};
     for(int i=0;i<n;i++) {
-        scan = scanf("%s",&s[i]);
+        scan = scanf("%s",tmp);
+        for(int j=0;j<d;j++) {
+            if(tmp[j]=='o') cnt[j]++;
+        }
     }
+
+    int max_tmp = 0;
     int max = 0;
-    int tmp = 0;
     for(int i=0;i<d;i++) {
-        int o_flag = 1;
-        for(int j=0;j<n;j++) {
-            if(s[j][i]!='o') {
-                o_flag = 0;
-                break;
-            }
-        }
-        if(o_flag) tmp++;
-        else {
-            if(max < tmp) max = tmp;
-            tmp = 0;
+        if(cnt[i]==n) {
+            max_tmp++;
+            if(max_tmp > max) max = max_tmp;
+        } else {
+                max_tmp = 0;
         }
     }
-    printf("%d",max);
+    printf("%d\n",max);
     return 0;
 }
