@@ -2,5 +2,9 @@
     "editor.fontSize": 17,
     "editor.quickSuggestions": {
         "other": false
+    },
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdio.h": "c"
     }
 }
