@@ -1,0 +1,10 @@
+@charset "utf-8";
+.center_wrap {
+    height: 100px;
+    width: 500px;
+    background-color: darkturquoise;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

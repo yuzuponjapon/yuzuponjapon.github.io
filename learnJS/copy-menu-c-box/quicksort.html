@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>quicksort</title>
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <link rel="stylesheet" href="./copy-menu-c.css">
+        <link rel="stylesheet" href="./quicksort.css">
+        <script>
+            window.onload = function(){
+                document.getElementById('css_button').onclick = () => {
+                    var text = document.getElementById('css_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+<!-- html -------------------->
+<!---------------------------->
+<!---------------------------->
+            <p class="css_tag">C</p>
+<pre id="css_doc" class="css_doc">
+<!-- c copy---------------->
+void quicksort(int a[], int left, int right)
+{
+    int pivot;
+    int i,j;
+
+    if(left &gt= right) {
+        return;
+    }
+
+    pivot = a[left];
+
+    i = left;
+    j = right;
+
+    while(1) {
+        while(a[i] &lt pivot) {
+            i++;
+        }
+        while(a[j] &gt pivot) {
+            j--;
+        }
+        if(i &gt= j) {
+            break;
+        }
+        int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+
+        i++;
+        j++;
+    }
+
+    quicksort(a, left, i - 1);  
+
+    quicksort(a, j + 1, right);
+
+}
+<!---------------------------->
+</pre>
+            <button type="button" id="css_button" class="css_cp_btn">コピー</button>
+            <button class="return" type="button" onclick="location.href='../copy-menu-c.html'">戻る</button>
+        </div>
+    </body>
+</html>
