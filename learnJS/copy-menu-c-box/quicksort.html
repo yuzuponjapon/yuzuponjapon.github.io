@@ -5,11 +5,10 @@
         <title>quicksort</title>
         <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
         <link rel="stylesheet" href="./copy-menu-c.css">
-        <link rel="stylesheet" href="./quicksort.css">
         <script>
             window.onload = function(){
-                document.getElementById('css_button').onclick = () => {
-                    var text = document.getElementById('css_doc');
+                document.getElementById('c_button').onclick = () => {
+                    var text = document.getElementById('c_doc');
                    console.dir(text); 
                     navigator.clipboard.writeText(text.innerText).then(e => {
                         alert('コピーおけ');
@@ -23,8 +22,8 @@
 <!-- html -------------------->
 <!---------------------------->
 <!---------------------------->
-            <p class="css_tag">C</p>
-<pre id="css_doc" class="css_doc">
+            <p class="c_tag">C</p>
+<pre id="c_doc" class="c_doc">
 <!-- c copy---------------->
 void quicksort(int a[], int left, int right)
 {
@@ -65,7 +64,7 @@ void quicksort(int a[], int left, int right)
 }
 <!---------------------------->
 </pre>
-            <button type="button" id="css_button" class="css_cp_btn">コピー</button>
+            <button type="button" id="c_button" class="c_cp_btn">コピー</button>
             <button class="return" type="button" onclick="location.href='../copy-menu-c.html'">戻る</button>
         </div>
     </body>

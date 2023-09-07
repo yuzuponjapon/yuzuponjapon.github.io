@@ -30,7 +30,7 @@ void quicksort(int a[], int left, int right)
         a[j] = tmp;
 
         i++;
-        j++;
+        j--;
     }
 
     quicksort(a, left, i - 1);  
