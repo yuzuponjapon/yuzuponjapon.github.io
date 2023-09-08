@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>bfs</title>
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <link rel="stylesheet" href="./copy-menu-c.css">
+        <script>
+            window.onload = function(){
+                document.getElementById('c_button').onclick = () => {
+                    var text = document.getElementById('c_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+<!-- html -------------------->
+<!---------------------------->
+<!---------------------------->
+            <p class="c_tag">C</p>
+<pre id="c_doc" class="c_doc">
+<!-- c copy---------------->
+#define MAX_NUM (10+1)
+
+typedef struct QUEUE {
+    int tail;
+    int head;
+    int data[MAX_NUM];
+} QUEUE_T;
+
+void initQueue(QUEUE_T *queue){
+    queue->head = 0;
+    queue->tail = -1;
+}
+
+/* ENQUEUEする関数 */
+int enqueue(QUEUE_T *queue, int input){
+    if((queue->tail + 2) % MAX_NUM == queue->head){
+        return -1;
+    }
+    queue->data[(queue->tail + 1) % MAX_NUM] = input;
+    queue->tail = (queue->tail + 1) % MAX_NUM;
+}
+
+/* DEQUEUEする関数 */
+int dequeue(QUEUE_T *queue){
+    int ret = 0;
+    if((queue->tail + 1) % MAX_NUM == queue->head){
+        return -1;
+    }
+    ret = queue->data[queue->head];
+    queue->head = (queue->head + 1) % MAX_NUM;
+    return ret;
+}
+<!---------------------------->
+</pre>
+            <button type="button" id="c_button" class="c_cp_btn">コピー</button>
+            <button class="return" type="button" onclick="location.href='../copy-menu-c.html'">戻る</button>
+        </div>
+    </body>
+</html>

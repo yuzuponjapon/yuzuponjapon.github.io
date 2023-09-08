@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>dfs</title>
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <link rel="stylesheet" href="./copy-menu-c.css">
+        <script>
+            window.onload = function(){
+                document.getElementById('c_button').onclick = () => {
+                    var text = document.getElementById('c_doc');
+                   console.dir(text); 
+                    navigator.clipboard.writeText(text.innerText).then(e => {
+                        alert('コピーおけ');
+                    });
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+<!-- html -------------------->
+<!---------------------------->
+<!---------------------------->
+            <p class="c_tag">C</p>
+<pre id="c_doc" class="c_doc">
+<!-- c copy---------------->
+#define MAX_NUM 10
+
+typedef struct POS {
+    int i;
+    int j;
+} POS_T;
+
+typedef struct STACK {
+    int tail;
+    POS_T data[MAX_NUM];
+} STACK_T;
+
+void initStack(STACK_T *stack){
+    stack->tail = -1;
+}
+
+int push(STACK_T *stack, int input){
+    if(stack->tail >= MAX_NUM - 1){
+        return -1;
+    }
+    stack->data[stack->tail + 1] = input;
+    stack->tail = stack->tail + 1;
+    return 0;
+}
+
+// return の型注意
+int pop(STACK_T *stack){
+    int ret = 0;
+    if(stack->tail == -1){
+        return -1;
+    }
+    ret = stack->data[stack->tail];
+    stack->tail = stack->tail - 1;
+    return ret;
+}
+<!---------------------------->
+</pre>
+            <button type="button" id="c_button" class="c_cp_btn">コピー</button>
+            <button class="return" type="button" onclick="location.href='../copy-menu-c.html'">戻る</button>
+        </div>
+    </body>
+</html>
