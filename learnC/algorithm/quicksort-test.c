@@ -15,10 +15,10 @@ void quicksort(int a[], int left, int right)
     j = right;
 
     while(1) {
-        while(a[i] < pivot) {
+        while(a[i] > pivot) {
             i++;
         }
-        while(a[j] > pivot) {
+        while(a[j] < pivot) {
             
             j--;
         }
