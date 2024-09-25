@@ -4,7 +4,8 @@ int main(void)
 	int a;
 	a = 20;
 	printf("a = %d\n", a);
-	printf("Visuall Studio ‚Å‚ƒŒ¾Œê‚ðŠw‚Ô\n");
+	printf("Visuall Studio ï¿½Å‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½\n");
 	printf("hello world\n");
+
 	return 0;
 }
